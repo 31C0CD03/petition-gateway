@@ -1,0 +1,10 @@
+services:
+  gateway-svc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: gateway-svc
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./cfg.yaml:/app/cfg.yaml:ro
